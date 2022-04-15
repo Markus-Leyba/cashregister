@@ -24,6 +24,8 @@
  
  6*** Any hints on an easy way to create a 'reveal the most valuable customer' option would be appreciated. 
  
+ 7*** Last one - 'membership' element, does not check if customerName is in memberList. 
+ 
  
  
  
