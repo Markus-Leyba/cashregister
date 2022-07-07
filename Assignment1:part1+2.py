@@ -100,7 +100,7 @@ def mainMenu ():
                 input("Invalid input. Please enter y or n (e.g y for yes).")
                 
             #UNIT PRICE
-            unitPrice = float(input("We'll scan later, for now fucking type the price:\n"))
+            unitPrice = float(input("We'll scan later, for now type the price:\n"))
             print(unitPrice)
             print(type(unitPrice))
             # unitPrice does not deal with exceptions
