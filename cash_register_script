@@ -1,0 +1,127 @@
+# Global data structures for storing customer and product information.
+customerList = ['Fred', 'Tom Brady', 'Julie Luck', 'Pope John Paul IV', 'Pikachu Nakamoto']
+memberList = ['Fred', 'Tom Brady', 'Julie Luck']
+productDict = {'bread': 3.00, 'shampoo': 5.50, 'conditioner': 5.60}
+
+# Function to display the main menu and handle user input.
+def mainMenu():
+    while True:
+        print('Welcome to the RMIT retail management system.')
+        print('1: Place an order')
+        print('2: Add/update products and prices')
+        print('3: Display existing customers')
+        print('4: Display existing customers with membership')
+        print('5: Display existing products')
+        print('0: Exit the program')
+
+        try:
+            selection = int(input("Enter the number of your choice: "))
+            if selection == 1:
+                placeOrder()
+            elif selection == 2:
+                addUpdateFunc()
+            elif selection == 3:
+                displayCustomers()
+            elif selection == 4:
+                displayMembers()
+            elif selection == 5:
+                displayProducts()
+            elif selection == 0:
+                print('Exiting program. Goodbye!')
+                break
+            else:
+                print('Invalid choice. Please enter a number between 0 and 5.')
+        except ValueError:
+            print('Please enter a valid number.')
+
+# Function to handle placing an order and print a receipt-like summary.
+def placeOrder():
+    print("\nPlacing an order")
+    customerName = input("Enter the customer's name: ")
+    if customerName not in customerList:
+        customerList.append(customerName)
+        print(f"Added {customerName} to the customer list.")
+
+    orders = []
+    total = 0
+
+    while True:
+        productName = input("Enter product name (or 'done' to finish): ")
+        if productName == 'done':
+            break
+        elif productName in productDict:
+            quantity = int(input(f"Enter quantity for {productName}: "))
+            orders.append((productName, quantity))
+        else:
+            print("Product not found. Please try again.")
+    print("\n----------------------------------------")
+    print("                RECEIPT                 ")
+    print("----------------------------------------")
+    print("\nItems Purchased:")
+    for order in orders:
+        productName, quantity = order
+        subtotal = productDict[productName] * quantity
+        print(f"{productName} x{quantity} @ ${productDict[productName]:.2f} each: ${subtotal:.2f}")
+        total += subtotal
+
+    print("----------------------------------------")
+    is_member = customerName in memberList
+    if not is_member:
+        membership = input("Would you like to become a member for a 5% discount on this purchase? (Y/N): ").lower()
+        if membership == 'y':
+            memberList.append(customerName)
+            print(f"{customerName} has been added as a member.")
+            is_member = True
+
+    if is_member:
+        discount = total * 0.05  # Applying a 5% discount
+        total_after_discount = total - discount
+        print(f"Subtotal: ${total:.2f}")
+        print(f"Membership discount (5%): -${discount:.2f}")
+        print(f"Total after discount: ${total_after_discount:.2f}")
+    else:
+        print(f"Total: ${total:.2f}")
+    print("----------------------------------------")
+    print("            Thank you for shopping!            ")
+    print("----------------------------------------\n")
+
+# Function to add or update products and prices.
+def addUpdateFunc():
+    print("Adding or updating a product")
+    productName = input("Enter the product name: ")
+    productPrice = float(input(f"Enter the price for {productName}: "))
+    productDict[productName] = productPrice
+    print(f"Product '{productName}' has been added/updated with price ${productPrice}.")
+
+# Function to display the list of customers.
+def displayCustomers():
+    print("List of customers:")
+    for customer in customerList:
+        print(f"- {customer}")
+
+# Function to display the list of members.
+def displayMembers():
+    print("List of members:")
+    for member in memberList:
+        print(f"- {member}")
+
+# Function to display the list of products and prices.
+def displayProducts():
+    print("List of products:")
+    for product, price in productDict.items():
+        print(f"- {product}: ${price}")
+
+# Helper function to apply membership discount.
+def applyMembershipDiscount(customerName):
+    if customerName in memberList:
+        print(f"{customerName} is a member and eligible for discounts.")
+    else:
+        membership = input("Would you like to become a member? (Y/N): ").lower()
+        if membership == 'y':
+            memberList.append(customerName)
+            print(f"{customerName} has been added as a member and is now eligible for discounts.")
+        else:
+            print("No membership selected. Proceeding without discount.")
+
+if __name__ == "__main__":
+    mainMenu()
