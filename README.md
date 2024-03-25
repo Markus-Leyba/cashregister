@@ -9,6 +9,7 @@ This project is a command-line based cash register system developed while learni
 - View a list of all customers and members.
 - Apply discounts for members.
 - Generate and display order receipts.
+![menu.png](images/menu.png)
 
 ## REQUIREMENTS
 Python 3.x. No external libraries are required except for sys, ensuring compatibility with a wide range of systems.
