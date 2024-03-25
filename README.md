@@ -1,7 +1,7 @@
 ## CASH REGISTER/RETAIL MANAGEMENT SYSTEM 
 
 ## OVERVIEW
-This project is a command-line based cash register system developed for a master's project. It allows for the management of customer orders, product listings, and member discounts within a retail context. Designed to run as a standalone Python script, it emphasizes a functional programming style.
+This project is a command-line based cash register system developed while learning Python. It allows for the management of customer orders, product listings, and member discounts within a retail context. Designed to run as a standalone Python script, it emphasizes a functional programming style.
 
 ## FEATURES
 - Place orders for multiple products.
@@ -29,13 +29,10 @@ Python 3.x. No external libraries are required except for sys, ensuring compatib
 - Exit: Select option 0 to exit the system.
 
 ## KNOWN ISSUES
-- Discounts may not always calculate to the correct decimal places.
-- Receipt formatting needs enhancement for better legibility.
 - The system currently does not support persistent storage, so all data is lost upon exit.
 
 ## FUTURE IMPROVEMENTS
 - Implement persistent storage for customers, members, and product information.
-- Refine the user interface for a more seamless experience.
 - Extend the functionality to support batch processing of orders.
 
 ## LICENCE
