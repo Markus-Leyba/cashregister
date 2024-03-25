@@ -26,7 +26,7 @@ Python 3.x. No external libraries are required except for sys, ensuring compatib
 - Add/Update Products and Prices: Select option 2 to enter new product details or update existing ones.
 ![add_update_product.png](images/add_update_product.png)
 - View Customers: Select option 3 to display a list of all customers.
-![display_existing_customers.png](images/disaply_existing_customers.png)
+![display_existing_customers.png](images/display_existing_customers.png)
 - View Members: Select option 4 for a list of all members.
 ![display_members.png](images/display_members.png)
 - View Products: Select option 5 to see all available products and their prices.
