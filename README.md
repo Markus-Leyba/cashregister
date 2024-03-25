@@ -22,11 +22,17 @@ Python 3.x. No external libraries are required except for sys, ensuring compatib
 
 ## USAGE INSTRUCTIONS
 - Place an Order: Select option 1 from the main menu and follow the prompts to enter customer details, product selection, and quantity.
+![place_order.png](images/place_order.png)
 - Add/Update Products and Prices: Select option 2 to enter new product details or update existing ones.
+![add_update_product.png](images/add_update_product.png)
 - View Customers: Select option 3 to display a list of all customers.
+![display_existing_customers.png](images/disaply_existing_customers.png)
 - View Members: Select option 4 for a list of all members.
+![display_members.png](images/display_members.png)
 - View Products: Select option 5 to see all available products and their prices.
+![display_product+prices.png](images/display_products+prices.png.png)
 - Exit: Select option 0 to exit the system.
+![exiting_program.png](images/exiting_program.png)
 
 ## KNOWN ISSUES
 - The system currently does not support persistent storage, so all data is lost upon exit.
