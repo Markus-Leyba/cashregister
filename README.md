@@ -30,7 +30,7 @@ Python 3.x. No external libraries are required except for sys, ensuring compatib
 - View Members: Select option 4 for a list of all members.
 ![display_members.png](images/display_members.png)
 - View Products: Select option 5 to see all available products and their prices.
-![display_product+prices.png](images/display_products+prices.png.png)
+![display_product+prices.png](images/display_products+prices.png)
 - Exit: Select option 0 to exit the system.
 ![exiting_program.png](images/exiting_program.png)
 
